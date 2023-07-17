@@ -1,2 +1,8 @@
 1. Selezionare tutti gli studenti nati nel 1990 (160);
 SOLUZIONE 1: SELECT * FROM `students` WHERE YEAR(`date_of_birth`) LIKE 1990; 
+
+2. Selezionare tutti i corsi che valgono più di 10 crediti (479);
+SOLUZIONE 2: 
+
+3. Selezionare tutti gli studenti che hanno più di 30 anni:
+SOLUZIONE 3: SELECT * FROM students WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30; 
