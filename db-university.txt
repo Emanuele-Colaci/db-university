@@ -16,5 +16,8 @@ SOLUZINE 5: SELECT * FROM `exams` WHERE DATE(`date`) = '2020-06-20' AND TIME(`ho
 6. Selezionare tutti i corsi di laurea magistrale (38);
 SOLUZINE 6: SELECT * FROM `degrees` WHERE `name` LIKE '%Magistrale%';
 
-7. Da quanti dipartimenti è composta l'università? (12)
+7. Da quanti dipartimenti è composta l'università? (12);
 SOLUZIONE 7: SELECT COUNT(*) AS numero_dipartimenti FROM `departments`; 
+
+8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50);
+SOLUZIONE 8: SELECT * FROM `teachers` WHERE `phone` IS NULL; 
