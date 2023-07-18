@@ -5,7 +5,7 @@ SOLUZIONE 1: SELECT `students`.`name` AS nome, `students`.`surname` AS cognome,`
 SOLUZIONE 2: SELECT `departments`.id AS n_dipartimento,`departments`.name AS nome, `departments`.address AS indirizzo, `departments`.phone AS telefono, `departments`.email AS email, `degrees`.`name` AS nome_dipartimento, `degrees`.level AS livello FROM `departments` JOIN `degrees` ON `degrees`.`department_id`LIKE `departments`.`id` WHERE `degrees`.`level` LIKE 'Magistrale' AND `departments`.`name` LIKE 'Dipartimento di Neuroscienze';
 
 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44);
-SOLUZIONE 3: 
+SOLUZIONE 3: SELECT `courses`.`id` AS n_corso, `courses`.`name` AS nome_corso, `teachers`.`id` AS n_insegnante, `teachers`.`name` AS nome, `teachers`.`surname` AS cognome FROM `courses` JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id` JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` WHERE `teachers`.`id` LIKE 44;
 
 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome;
 SOLUZIONE 4: 
